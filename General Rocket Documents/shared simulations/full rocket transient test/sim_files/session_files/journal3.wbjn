@@ -1,0 +1,19 @@
+# encoding: utf-8
+# 2025 R2
+SetScriptVersion(Version="25.2.170")
+system1 = GetSystem(Name="FLTG")
+solution1 = system1.GetContainer(ComponentName="Solution")
+solution1.Edit()
+setup1 = system1.GetContainer(ComponentName="Setup")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 1)')
+setup1.SendCommand(Command="""/file/set-tui-version \"25.2\"
+Graphics driver currently in use: dx11""")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Profile...")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*ImportSubMenu*Data...")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "ToolBar*Workbench Tools*fl_mesh_generation")')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "ToolBar*Workbench Tools*fl_mesh_generation")')
+solution1.Edit()
+setup1.SendCommand(Command='(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 1)')
+setup1.SendCommand(Command="""/file/set-tui-version \"25.2\"
+Graphics driver currently in use: dx11""")
+Save(Overwrite=True)

@@ -1,0 +1,4 @@
+use commands in the command line
+"file"
+"read-transient-table"
+input the path of the CSV
